@@ -1,0 +1,250 @@
+/* Chargement des polices de caractère */
+@font-face{
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format('truetype');
+}
+@font-face{
+    font-family: "PlayfairDisplay";
+    font-weight: bold;
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format('truetype');
+}
+@font-face{
+    font-family: "Buntutu";
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf") format('truetype');
+}
+
+/* CSS Global */
+*{
+    font-size: 14px;
+    color: #626262;
+    /* https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing */
+    /* La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculé */
+    box-sizing: border-box;
+    font-family: "PlayfairDisplay";
+}
+img{
+    max-width: 100%;
+}
+a,
+a:visited{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+@media screen and (min-width: 1030px){
+    a:hover{
+        color: rgba(255, 5, 5, 0.75);
+    }
+}
+p{
+    line-height: 26px;
+}
+
+/* Classes utilitaires */
+.container{
+    width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Le conteneur ne prendra jamais plus de 100% de la largeur disponible */
+    max-width: 100%;
+}
+@media screen and (min-width: 1030px){
+    .left{
+        float: left;
+    }
+    .right{
+        float: right;
+    }
+    .center{
+        align-items: center;
+    }
+    .clear{
+        clear: both;
+    }
+}
+.flex{
+    display: flex;
+}
+/* Header */
+header{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+header > img{
+    margin-top: 60px;
+}
+#logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+header li + li{
+    border-top: 1px solid white;
+}
+@media screen and (min-width: 1030px){
+    header li + li{
+        margin-left: 115px;
+    }
+}
+#container-menu{
+    float: right;
+    margin-right: 3%;
+    position: relative;
+}
+#container-menu nav{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: black;
+    box-shadow: 5px 5px 5px black;
+}
+#container-menu nav a{
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 15px;
+}
+#container-menu nav ul{
+    flex-direction: column;
+}
+#container-menu nav.open{
+    display: block;
+}
+
+
+@media screen and (min-width: 1030px){
+    #logo{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #burger{
+        display: none;
+    }
+    #container-menu nav{
+        display: block;
+        position: static;
+        top: auto;
+        right: auto;
+        background-color: white;
+        box-shadow: none;
+    }
+    #container-menu{
+        margin-right: 0;
+    }
+    #container-menu nav ul{
+        flex-direction: row;
+    }
+    #container-menu nav a{
+        color: #626262;
+        text-align: left;
+        display: inline;
+        padding: 0;
+    }
+}
+
+/* CONTENU */
+main,
+#sidebar{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+@media screen and (min-width: 1030px){
+    main{
+        width: 66%;
+        padding-left: 80px;
+        padding-right: 0;
+    }
+    #sidebar{
+        width: 30%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+main,
+#sidebar{
+    margin-bottom: 115px;
+}
+article header{
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+article .categorie{
+    font-family: "Buntutu";
+    color: #b4ad9e;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+article h1{
+    font-size: 30px;
+}
+article p,
+article img{
+    margin-bottom: 20px;
+}
+article footer{
+    background-color: white;
+    padding-top: 70px;
+    padding-bottom: 115px;
+    font-family: "Buntutu";
+}
+article footer nav{
+    margin-left: 15px;
+}
+
+.similaires{
+    background-color: #f0f0f0;
+    padding-left: 75px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+div#comments{
+    padding-left: 75px;
+}
+img + img{
+    margin-left: 40px;
+}
+section>div>p{
+    margin-right: 180px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #f0f0f0;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    font-family: "PlayfairDisplay";
+}
+footer li + li,
+footer p + nav{
+    margin-left: 15px;
+}
+@media screen and (min-width: 1030px){
+    footer .container > nav{
+        padding-left: 75px;
+    }
+}
+footer div > nav{
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 1030px){
+    footer div > nav{
+        margin-bottom: 0;
+    }
+}
+footer ul,
+footer section{
+    justify-content: center;
+}
+
+footer a{
+    color: #000000;
+}
+
+/* CSS Tablettes */
+
+/* CSS ordinateurs */
